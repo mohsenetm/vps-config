@@ -1,0 +1,31 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns1.parsdev.net.  root.ns1.parsdev.net. (
+                        6
+                        604800
+                        86400
+                        2419200
+                        604800 )
+
+;Name Server Information
+
+@        IN      NS      ns1.parsdev.net.
+
+;IP address of Name Server
+
+ns1     IN      A       92.119.57.160
+
+;Mail Exchanger
+
+newcash.me.   IN     MX   10   mail.newcash.me.
+
+;A – Record HostName To Ip Address
+@     IN       A      92.119.57.160
+www     IN       A      92.119.57.160
+mail    IN       A      92.119.57.160
+
+;CNAME record
+
+ftp     IN      CNAME   www.newcash.me.
